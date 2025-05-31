@@ -1,0 +1,62 @@
+TASK 1
+
+At first we reset to the length of the destionation array because i don't know
+why the test are runned at the same time and they were overlapping :)).
+Then we will go through the array one by one. At first we will aplay 
+a AND mask with 1 on the number we are on. And if the zero flag is triggerd
+then the number is even. Then we will test if the number is power of two.
+I did this with the forumula (n & (n - 1)) and if the zero flag is triggred then
+the number is a power of two.
+
+TASK 2
+
+-SUBTASK 1
+
+We will go through the arry of the evnts. And then we will verify if the 
+event isvalid or not. This is  kind of straight forward :)) nothing special.
+
+-SUBTASK 2
+
+At this subtask I used the buble sort algorithm to sort the array of events.
+It is implemented like in C :)). First for will go from 0 to n - 1 and the 
+second one will go from i to n and it will check the validity, year, month,
+day, and name to match the description of the sorting in the homework.
+
+TASK 3
+
+At first we will put the first character of the string in ah. Then it will
+shift the bits to the right two positoion to have the 6 bits rquiered and to
+store the 2 bits for the next character for encryption. Then we will move
+the value form ah into ebx and that is the position for the char form the 
+alphabet array. After this we will put the result in the destionation array.
+And xor the ah to delete the bits used.
+
+For the second 6 bits we need to shift 2 times to the left and then we put 
+in al the second char then we move the bits to the left 4 times to get the 
+second pair of 6 bits.
+
+For the the third 6 bits we xor ah and then move the bits 4 times to the left.
+Then we copy the third char into the al and move the bits 2 times to the left.
+And we will get the third pair of bits in ah.
+
+And for the last 4 pair of bits we will xor ah and then moves 6 times the bits
+to the left.
+
+TASK 4
+
+The implementation of this algorithm uses a frequncy array that counts the 
+frequncy of each number from the column, row, or box. And then it will check
+the the array if all the elemnts are 1. And if there are all 1 the eax will 
+be 1.
+
+To position on the first element of the row we just use the formula row * 9
+to give us the position of the first elemnt. And we will go thru the 
+row by incrementing by 1.
+
+To position on the first element of the column we just use the edx value.
+And to go thru the column we just add 9 to go to the next element.
+
+To position on the first element of the box, first we will divide the box
+number by 3. Then we will take the quatient and muliply by 27 and add to it 
+3 times de reminder of the first division. To go thru the bos we will 
+go thru each line of the box and then add 7 to go to the next line.
